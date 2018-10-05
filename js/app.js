@@ -17,9 +17,31 @@ $(document).ready(function(){
     })
   }
 
+//Renderowanie listy książek
   function renderBookList(renderingPoint, arrBooks) {
-    console.log(arrBooks);
-    console.log("render :D");
+    renderingPoint.empty();
+    for(var i=0; i<arrBooks.length; i++){
+      var titleDiv = getTitleDiv(arrBooks[i]);
+      var descriptionDiv = getDescriptionDiv();
+      renderingPoint.append(titleDiv);
+      renderingPoint.append(getDescriptionDiv());
+    }
   }
+
+//Tworzenie DIV z tytułem książki i zwracanie
+  function getTitleDiv(bookObj) {
+    var titleDiv = $("<div class='title'>");
+    titleDiv.text(bookObj.title);
+    return titleDiv;
+  }
+
+//Tworzenie DIV z opisem i tyle
+  function getDescriptionDiv() {
+    var descriptionDiv = $("<div class='description'>");
+
+    return descriptionDiv;
+  }
+
+
 
 });
