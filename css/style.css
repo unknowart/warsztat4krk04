@@ -1,8 +1,13 @@
 .title {
-  background-color: aquamarine;
+  background-color: lightblue;
 }
 
 .description {
   font-size: smaller;
-  background-color: hotpink;
+  background-color: yellow;
+}
+
+.del-book-btn {
+  background-color: red;
+  font-size: 15px;
 }
